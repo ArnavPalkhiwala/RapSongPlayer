@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Rap Music Player</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
+</head>
+
+<body>
+
+  <h1>
+    Welcome to Arnav Palkhiwala's Music Player!
+  </h1>
+
+  <h3>
+    These website contains the clean versions of 8 of the most popular<br> <em><strong>Rap</strong></em> songs from 2018-2020. Enjoy
+    Listening!
+  </h3>
+  <audio id="player" ontimeupdate="updateProgressInSong()">
+    <source id="source">
+    Audio not supported
+  </audio>
+
+  <span id="currentlyPlaying"></span><span id="currentSong"></span>
+
+  <progress id="progress" value="0" max="100"></progress>
+
+
+
+  <div id="controls">
+    <i class="fas fa-play-circle fa-5x" onclick="playSong()"></i>
+    <i class="far fa-pause-circle fa-5x" onclick="pauseSong()"></i>
+    <i class="fast-forward" onclick=""></i>
+
+    <p>
+      Volume:
+    </p>
+    <i class="fas fa-volume-down"></i>
+
+    <input type="range" id="volumeSlider" min="0" max="1" step="0.01" />
+    <i class="fas fa-volume-up"></i>
+  </div>
+
+  <h4>
+    Click on the Name of a Song to Listen to it!
+  </h4>
+  <div id="songsList"></div>
+
+  <script src="script.js"></script>
+  <h4>
+    These are the pictures of the rappers who sang the songs above...
+  </h4>
+  <div id="images-1" style="display: flex; justify-content:space-around;">
+    <img class="gunna" src="pictures/gunna.jpg">
+    <h6>Gunna
+      <br> <br> <br>
+      Lil Baby
+    </h6>
+
+    <img class="lil-baby" src="pictures/lil baby.jpg">
+
+  </div>
+
+  <br />
+  <div id="images-2" style="display: flex; justify-content:space-around;">
+    <img class="lil-tjay" src="pictures/lil tjay.jpg">
+    <h6>Lil Tjay
+      <br> <br> <br>
+      Lil Uzi Vert
+    </h6>
+    <img class="uzi" src="pictures/Lil-Uzi-Vert.jpg">
+  </div>
+  <br />
+
+  <div id="images-3" style="display: flex; justify-content:space-around;">
+    <img class="mustard" src="pictures/mustard.jpg">
+    <h6>Mustard
+      <br> <br> <br>
+      Polo G
+    </h6>
+    <img class="polo" src="pictures/Polo G.jpg">
+  </div>
+  <br />
+
+  <div id="images-4" style="display: flex; justify-content:space-around;">
+    <img class="roddy" src="pictures/roddy ricch.jpg">
+
+    <h6>Roddy Ricch
+      <br> <br> <br>
+      The Weeknd
+    </h6>
+    <img class="weeknd" src="pictures/the weeknd.jpg">
+  </div>
+
+  <br />
+</body>
+
+</html>
